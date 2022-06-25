@@ -1,2 +1,5 @@
 <input class="app-input-component"
-    [placeholder]="placeholder" />
+    [placeholder]="placeholder" 
+    [(ngModel)]="inputModel"
+    (ngModelChange)="onInputModelChange($event)"
+/>
