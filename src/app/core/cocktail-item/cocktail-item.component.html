@@ -1,0 +1,6 @@
+<div class="app-cocktail-item">
+    <div *ngIf="cocktailItem.strDrinkThumb" class="app-cocktail-item-image">
+        <img [src]="cocktailItem.strDrinkThumb" [alt]="cocktailItem.strDrink">
+    </div>
+    <p class="app-cocktail-item-text">{{cocktailItem.strDrink}}</p>
+</div>

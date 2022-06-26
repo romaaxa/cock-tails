@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -18,6 +19,9 @@ export class InputComponent {
    */
   @Input()
   inputModel: Event;
+  
+  @Input()
+  inputField: FormControl;
 
   /**
    * Model change value emitter

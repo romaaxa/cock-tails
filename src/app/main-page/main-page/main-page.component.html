@@ -4,4 +4,12 @@
             (modelChanged)="onSearchDrink($event)">
         </app-input>
     </app-header>
+
+    <div *ngIf="searchResult" class="search-result-wrapper">
+        <div class="search-result-container">
+            <div *ngFor="let item of searchResult.drinks" class="cocktail-item-wrapper">
+                <app-cocktail-item [cocktailItem]="item"></app-cocktail-item>
+            </div>
+        </div>
+    </div>
 </div>
