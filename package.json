@@ -8,7 +8,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --aot --target=production",
+    "build": "ng build --aot --target production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
