@@ -6,7 +6,7 @@
         </app-input>
     </app-header>
 
-    <div *ngIf="searchResult" class="search-result-wrapper">
+    <div *ngIf="searchResult; else empty" class="search-result-wrapper">
         <div class="search-result-container">
             <div *ngFor="let item of searchResult" class="cocktail-item-wrapper">
                 <app-cocktail-item [cocktailItem]="item"></app-cocktail-item>
@@ -14,3 +14,7 @@
         </div>
     </div>
 </div>
+
+<ng-template #empty>
+    <img src="../../../assets/empty-content.jpg" class="empty-content-image" />
+</ng-template>

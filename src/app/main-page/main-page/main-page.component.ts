@@ -46,11 +46,7 @@ export class MainPageComponent {
     clearTimeout(this.debounce)
     this.debounce = setTimeout(() => {
       this.apiService.searchCocktails(name)
-        .subscribe((res: SearchResultResponse) => {
-          console.log(res);
-          return this.searchResult = res.drinks as DrinkModel[] | any;
-        }
-        );
+        .subscribe((res: SearchResultResponse) => this.searchResult = res.drinks as DrinkModel[] | any);
     }, 500);
   }
 }
