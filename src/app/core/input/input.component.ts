@@ -19,7 +19,7 @@ export class InputComponent {
    */
   @Input()
   inputModel: Event;
-  
+
   @Input()
   inputField: FormControl;
 

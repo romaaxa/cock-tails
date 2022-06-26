@@ -1,5 +1,5 @@
 import { DrinkModel } from "./drinks.model";
 
-export interface SearchResultResponce {
+export interface SearchResultResponse {
     drinks: DrinkModel;
 }

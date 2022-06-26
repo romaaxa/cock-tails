@@ -1,11 +1,25 @@
 .app-main-page-container-component {
-    .app-input-component-container {
-        margin-left: 45%;
-        margin-top: 50%;
+    background-image: url('../../../assets/background.jpg');
+    
+    .app-header-component-container {
+        display: flex;
+        position: relative;
         
-        .app-input-component {
-            position: relative;
-            margin-top: 8px;
+        .material-icons {
+            position: absolute;
+            font-size: 32px;
+            left: 20px;
+            top: 9px;
+        }
+    
+        .app-input-component-container {
+            margin-left: 45%;
+            margin-top: 50%;
+            
+            .app-input-component {
+                position: relative;
+                margin-top: 8px;
+            }
         }
     }
     

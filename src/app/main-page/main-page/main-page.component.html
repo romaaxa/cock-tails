@@ -1,5 +1,6 @@
 <div class="app-main-page-container-component">
     <app-header class="app-header-component-container">
+        <span class="material-icons">wine_bar</span>
         <app-input class="app-input-component-container" [placeholder]="inputPlaceholder" [inputModel]="drinkName"
             (modelChanged)="onSearchDrink($event)">
         </app-input>
@@ -7,7 +8,7 @@
 
     <div *ngIf="searchResult" class="search-result-wrapper">
         <div class="search-result-container">
-            <div *ngFor="let item of searchResult.drinks" class="cocktail-item-wrapper">
+            <div *ngFor="let item of searchResult" class="cocktail-item-wrapper">
                 <app-cocktail-item [cocktailItem]="item"></app-cocktail-item>
             </div>
         </div>

@@ -2,5 +2,15 @@
     <div *ngIf="cocktailItem.strDrinkThumb" class="app-cocktail-item-image">
         <img [src]="cocktailItem.strDrinkThumb" [alt]="cocktailItem.strDrink">
     </div>
-    <p class="app-cocktail-item-text">{{cocktailItem.strDrink}}</p>
+    <p class="app-cocktail-item-name-text">{{cocktailItem.strDrink}}</p>
+    <div class="app-cocktail-item-text-container">
+        <p class="app-cocktail-item-paragraph">{{cocktailItem.strAlcoholic + " " + cocktailItem.strCategory}}</p>
+        <p class="app-cocktail-item-paragraph ">{{cocktailItem.strGlass}}</p>
+    </div>
+    <app-accordion [title]="ingredientsTitle" [description]="getDescription(cocktailItem.strIngredient1)"
+        [panelText]="getIngredients(cocktailItem)">
+    </app-accordion>
+    <app-accordion [title]="instructionsTitle" [description]="getDescription(cocktailItem.strInstructions)"
+        [panelText]="getInstructions(cocktailItem)">
+    </app-accordion>
 </div>

@@ -5,20 +5,36 @@
     min-width: 300px;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px $black solid;
+    border: 1px $light-grey solid;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $white;
+    z-index: -1;
     
     &-image {
         img {
+            border-radius: 5px;    
             height: 250px;
             width: 250px;
         }
     }
     
-    &-text {
+    &-name-text {
         font-weight: bold;
+    }
+    
+    &-text-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+        
+        .app-cocktail-item-paragraph {
+            margin: 0 0 1px 0;
+        }
     }
 }

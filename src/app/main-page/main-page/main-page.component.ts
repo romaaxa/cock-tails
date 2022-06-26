@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Observable, debounceTime, distinctUntilChanged } from 'rxjs';
 import { DrinkModel } from '../models/drinks.model';
+import { SearchResultResponse } from '../models/search-result-response.model';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -29,7 +29,7 @@ export class MainPageComponent {
   /**
    * Search result
    */
-  searchResult: any;
+  searchResult: DrinkModel[];
 
   /**
    * Constructor
@@ -46,9 +46,9 @@ export class MainPageComponent {
     clearTimeout(this.debounce)
     this.debounce = setTimeout(() => {
       this.apiService.searchCocktails(name)
-        .subscribe(res => {
+        .subscribe((res: SearchResultResponse) => {
           console.log(res);
-          return this.searchResult = res
+          return this.searchResult = res.drinks as DrinkModel[] | any;
         }
         );
     }, 500);
